@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+}
+
+.container {
+	border-radius: 1em;
+	box-shadow: 0 0 1em 0 rgba(51, 51, 51, 0.25);
+	display: block;
+	max-width: 650px;
+	overflow: hidden;
+	/* -webkit-transform: translate(-50%, -50%); */
+	/* -ms-transform: translate(-50%, -50%); */
+	/* transform: translate(-50%, -50%); */
+	padding: 2em;
+	position: relative;
+	 /* top: 40vh; */
+	/* left: 50%; */
+	z-index: 1;
+	width: 100%;
+	height: max-content;
+	margin: 5rem auto;
+}
+
+.container:before {
+	background: url("../../rccg_logo.svg") center no-repeat;
+	background-size: cover;
+	content: "";
+	-webkit-filter: blur(10px);
+	filter: blur(20px);
+	height: 80vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 80vw;
+}
+
+.container:after {
+	background: rgba(255, 255, 255, 0.6);
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+}
+
+.valid,
+.invalid {
+	display: block;
+	font-size: 1.25em;
+	margin-bottom: 0.5em;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+.valid {
+	border-bottom: 1px solid #333;
+}
+
+.col-one-half {
+	float: left;
+	width: 50%;
+}
+.col-one-half:nth-of-type(even) {
+	border-left: 1px solid #333;
+	padding-left: 0.25em;
+}
+form label input {
+	background: none;
+	border: none;
+	line-height: 1em;
+	font-weight: 500;
+	font-size: 1.7rem;
+	padding: 0.125em 0.25em;
+	width: 100%;
+}
+
+.valid__input {
+	color: #000;
+}
+
+.invalid__input {
+	color: #f00;
+}
+
+form label input:focus {
+	outline: none;
+}
+form label input:-webkit-autofill {
+	background-color: transparent !important;
+}
+
+.label-text {
+	display: block;
+	font-size: 1.7rem;
+	font-weight: bold;
+	padding-bottom: 0.7em;
+	text-transform: uppercase;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+.select__label__text {
+	display: block;
+	font-size: 1.7rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+form label.invalid {
+	border-bottom: 1px solid #f00;
+}
+
+form label.invalid span.label-text {
+	color: #f00;
+}
+
+h1 {
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	margin: 0 0 1.5em 0;
+	text-align: center;
+	font-family: "Baloo Da 2", cursive;
+}
+
+/* h1 img {
+	height: auto;
+	margin: 0 auto;
+	max-width: 240px;
+	width: 100%;
+} */
+
+.text-center {
+	text-align: center;
+}
+
+select {
+	all: unset;
+	padding-right: 15px;
+	font-size: 0.7em;
+	background: url("https://www.charbase.com/images/glyph/9662") no-repeat
+		right;
+	background-size: 16px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.phone__error {
+	margin: -1rem 0 2rem;
+	font-size: 1.3rem;
+	color: #f00;
+}
+
+.custom-file-upload {
+	font-family: calibri;
+	font-size: 1.5rem;
+	font-weight: 500;
+	width: 170px;
+	padding: 5px;
+	/* margin: 5rem 0; */
+	border: 1px dashed #bbb;
+	border-radius: 0.5rem;
+	text-align: center;
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.img__text {
+	font-size: 1rem;
+	color: #009900;
+	margin-top: 1.5rem;
+}
+
+.btn__rainbow {
+	--border-radius: 0.4rem;
+	--border-width: 1.7px;
+
+	appearance: none;
+	position: relative;
+	padding: 1em 1em;
+	margin-top: 3rem;
+	border: 0;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 15px;
+	background-color: transparent;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: #111;
+}
+
+.btn__rainbow::after {
+	--m-i: linear-gradient(#000, #000);
+	--m-o: content-box, padding-box;
+
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: var(--border-width);
+	border-radius: var(--border-radius);
+	background-image: conic-gradient(
+		#488cfb,
+		#29dbbc,
+		#ddf505,
+		#ff9f0e,
+		#e440bb,
+		#655adc,
+		#488cfb
+	);
+
+	mask-image: var(--m-i), var(--m-i);
+	mask-origin: var(--m-o);
+	mask-clip: var(--m-o);
+	mask-composite: exclude;
+	-webkit-mask-composite: destination-out;
+
+	filter: hue-rotate(0);
+	animation: hue linear 500ms infinite;
+	animation-play-state: paused;
+}
+
+.btn__rainbow:hover::after {
+	animation-play-state: running;
+	transform: rotate(-3deg);
+}
+
+@keyframes hue {
+	to {
+		filter: hue-rotate(1turn);
+	}
+}
+
+@media only screen and (max-width: 768px) and (min-width: 540px) {
+	.container {
+		max-width: 500px;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.label-text {
+		font-size: 1.5rem;
+	}
+
+	form label input,
+	select,
+	.custom-file-upload,
+	.btn__rainbow {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 539px) {
+	.container {
+		max-width: 450px;
+	}
+	.col-one-half {
+		width: 100%;
+		float: none;
+	}
+	.col-one-half:nth-of-type(even) {
+		border-left: none;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: 509px) {
+	.container {
+		max-width: 360px;
+	}
+
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	.label-text {
+		font-size: 1.3rem;
+	}
+
+	form label input,
+	select,
+	.custom-file-upload,
+	.btn__rainbow {
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 380px) {
+	.container {
+		max-width: 300px;
+	}
+}
